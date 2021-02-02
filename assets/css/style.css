@@ -23,4 +23,14 @@ body {
   color: rgba(255, 255, 255, .1);
   background: url("../images/loader.png") repeat-x bottom left;
   -webkit-background-clip: text;
+  animation: wave 7.5s ease forwards;
+}
+
+@keyframes wave {
+  0% {
+    background-position: left 0 top 180px;
+  }
+  100% {
+    background-position: left 900px top 30px;
+  }
 }
