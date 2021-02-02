@@ -15,14 +15,13 @@ const pageTransition = async () => {
     ease: "Expo.easeInOut",
   });
   const polyTeamTitle = document.querySelector(".loader-wrapper .loader h1");
-  polyTeamTitle.style.opacity = "1";
   polyTeamTitle.style.webkitAnimationPlayState = "running";
   tl.to(".loader-wrapper", {
     duration: 0.9,
     width: "100%",
     left: "100%",
     ease: "Expo.easeInOut",
-    delay: 5.2,
+    delay: 5.4,
   });
   tl.set(".loader-wrapper", { left: "-100%" });
 };
@@ -40,7 +39,6 @@ const contentAnimation = () => {
 
 const polyTeamTitle = document.querySelector(".loader-wrapper .loader h1");
 polyTeamTitle.style.webkitAnimationPlayState = "paused";
-polyTeamTitle.style.opacity = "0";
 
 barba.init({
   sync: true,

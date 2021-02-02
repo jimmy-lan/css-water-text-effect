@@ -11,7 +11,7 @@ body {
 }
 
 .loader-wrapper {
-  width: 0;
+  width: 100vw;
   height: 100vh;
   background-color: #262626;
   display: flex;
@@ -22,7 +22,12 @@ body {
   overflow: hidden;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
+  cursor: wait;
+}
+
+.loader {
+  cursor: wait;
 }
 
 .loader h1 {
@@ -32,7 +37,7 @@ body {
   background: url("../images/loader.png") repeat-x bottom left;
   -webkit-background-clip: text;
   animation: wave 7.5s ease forwards;
-  transition: .3s;
+  cursor: wait;
 }
 
 @keyframes wave {
