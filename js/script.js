@@ -6,21 +6,23 @@ const delay = (time = 2000) => {
   });
 };
 
-const pageTransition = () => {
+const pageTransition = async () => {
   let tl = gsap.timeline();
-  tl.to(".loader-wrapper", {
-    duration: 0.9,
+  await tl.to(".loader-wrapper", {
+    duration: 1.1,
     width: "100%",
     left: "0",
     ease: "Expo.easeInOut",
   });
-
+  const polyTeamTitle = document.querySelector(".loader-wrapper .loader h1");
+  polyTeamTitle.style.opacity = "1";
+  polyTeamTitle.style.webkitAnimationPlayState = "running";
   tl.to(".loader-wrapper", {
     duration: 0.9,
     width: "100%",
     left: "100%",
     ease: "Expo.easeInOut",
-    delay: 3.3,
+    delay: 5.2,
   });
   tl.set(".loader-wrapper", { left: "-100%" });
 };
@@ -36,6 +38,10 @@ const contentAnimation = () => {
   });
 };
 
+const polyTeamTitle = document.querySelector(".loader-wrapper .loader h1");
+polyTeamTitle.style.webkitAnimationPlayState = "paused";
+polyTeamTitle.style.opacity = "0";
+
 barba.init({
   sync: true,
   transitions: [
@@ -43,7 +49,7 @@ barba.init({
       async leave() {
         const done = this.async();
         pageTransition();
-        await delay(5000);
+        await delay(6600);
         done();
       },
       async enter() {

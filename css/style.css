@@ -32,6 +32,7 @@ body {
   background: url("../images/loader.png") repeat-x bottom left;
   -webkit-background-clip: text;
   animation: wave 7.5s ease forwards;
+  transition: .3s;
 }
 
 @keyframes wave {
