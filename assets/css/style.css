@@ -6,13 +6,16 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background: #161616;
+  color: #fff;
 }
 
 .loader-wrapper {
   width: 100vw;
   height: 100vh;
   background-color: #262626;
-  display: flex;
+  /*display: flex;*/
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -33,4 +36,47 @@ body {
   100% {
     background-position: left 900px top 30px;
   }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 36px;
+}
+
+.header h1.title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  letter-spacing: 1.5px;
+}
+
+.header p {
+  padding: 0 64px;
+  text-align: center;
+}
+
+.button {
+  margin: 8px;
+  position: relative;
+  left: -5px;
+}
+
+.button a {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  font-size: .8rem;
+  padding: 24px 40px;
+  letter-spacing: 4px;
+  background: transparent;
+  transition: .3s;
+}
+
+.button a:hover {
+  color: #000;
+  background-color: #f5f5f5;
 }
