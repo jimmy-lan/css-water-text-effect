@@ -11,13 +11,18 @@ body {
 }
 
 .loader-wrapper {
-  width: 100vw;
+  width: 0;
   height: 100vh;
   background-color: #262626;
-  /*display: flex;*/
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .loader h1 {
