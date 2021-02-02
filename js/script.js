@@ -15,14 +15,20 @@ const pageTransition = async () => {
     ease: "Expo.easeInOut",
   });
   const polyTeamTitle = document.querySelector(".loader-wrapper .loader h1");
+  const loadingText = document.getElementById("loading-text");
+  loadingText.innerText = "Finding the right wire for your request...";
   polyTeamTitle.style.webkitAnimationPlayState = "running";
   tl.to(".loader-wrapper", {
     duration: 0.9,
     width: "100%",
     left: "100%",
     ease: "Expo.easeInOut",
-    delay: 5.4,
+    delay: 6.6,
   });
+  await delay(1500);
+  loadingText.innerText = "Waking up sleepy API entry points...";
+  await delay(2100);
+  loadingText.innerText = `Got this response from API: Ahhhhh! I'm up and running!`;
   tl.set(".loader-wrapper", { left: "-100%" });
 };
 
@@ -47,7 +53,7 @@ barba.init({
       async leave() {
         const done = this.async();
         pageTransition();
-        await delay(6600);
+        await delay(7500);
         done();
       },
       async enter() {
